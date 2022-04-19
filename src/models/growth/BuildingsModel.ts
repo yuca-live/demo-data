@@ -1,0 +1,68 @@
+import { Table, Schema, Random, Fixed, FillInFrequency } from '../../yuca-faker/decorators';
+import faker = require('@faker-js/faker/locale/pt_BR');
+
+@Schema('growth')
+@Table('buildings')
+export class BuildingsModel {
+  @Random('{{lorem.word}}')
+  static slug: string
+
+  @Random('{{lorem.word}}')
+  static type: string
+
+  @Random('{{lorem.word}}')
+  static name_x: string
+
+  @Random('{{lorem.word}}')
+  static description: string
+
+  @Random('{{lorem.word}}')
+  static address: string
+
+  @Random('{{lorem.word}}')
+  static number: string
+
+  @Random('{{lorem.word}}')
+  static neighborhood: string
+
+  @Random('{{lorem.word}}')
+  static reference_region: string
+
+  @Random('{{lorem.word}}')
+  static zipcode: string
+
+  @Random('{{lorem.word}}')
+  static city: string
+
+  @Random('{{lorem.word}}')
+  static state: string
+
+  @Random('{{lorem.word}}')
+  static country: string
+
+  @Random('{{lorem.word}}')
+  static location: string
+
+  @Random('{{lorem.word}}')
+  @FillInFrequency(50)
+  static published_at: string
+
+  @Random('{{lorem.word}}')
+  @FillInFrequency(50)
+  static neighborhood_id: string
+
+  @Random('{{lorem.word}}')
+  @FillInFrequency(50)
+  static neighborhood_slug: string
+
+  @Fixed(0)
+  @FillInFrequency(50)
+  static revision: string
+
+  @Fixed('[]'::jsonb)
+  static images: string
+
+  @Random('{{lorem.word}}')
+  @FillInFrequency(50)
+  static ops_building_id: string
+}
